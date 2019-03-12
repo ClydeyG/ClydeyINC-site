@@ -17,10 +17,11 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="current"><a href="products.html">Products</a></li>
-                        <li><a href="new.html">New Stuff</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li class="current"><a href="products.php">Products</a></li>
+                        <li><a href="new.php">New Stuff</a></li>
+                        <li><a href="steam_login.php">Login With Steam</a></li>
                     </ul>
                 </nav>
             </div>

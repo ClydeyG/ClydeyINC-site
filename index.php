@@ -1,4 +1,48 @@
 <!DOCTYPE html>
+
+<?php
+
+    require 'steamauth/steamauth.php';  
+
+?>
+
+<style>
+.dropbtn {
+  background-color: #35424a;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #35424a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #e64316;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #e64316;}
+</style>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,17 +58,31 @@
         <header>
             <div class="container">
                 <div id="branding">
-                    <h1><img src="./img/logo_main.png" width="25px" height="28px"><span class="highlight"> Clydey</span> Inc.</h1>
+                    <h1><img src="./img/logo_main.png" width="25px" height="28px"><span class="highlight"> Clydey</span> Inc. </h1>
                 </div>
                 <nav>
                     <ul>
-                        <li class="current"><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="new.html">New Stuff</a></li>
-                    </ul>
+                        <li class="current"><a href="../index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="products.php">Products</a></li>
+                        <li><a href="new.php">New Stuff</a></li>
+                        <li><a></a>                    <?php if(!isset($_SESSION['steamid'])) {
+
+                        loginbutton();
+
+                     } else { ?>                    </li>                       
+
+
+   
                 </nav>
-            </div>
+            </div>                 </ul> <div class="dropdown">
+    <button class="dropbtn"><?php     include ('steamauth/userInfo.php'); ?><img class="img-rounded" src="<?=$steamprofile['avatar'];?>"> <b><?=$steamprofile['personaname'];?></b></button>
+    <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#"><?php logoutbutton(); } ?></a>
+</div>
+</div>    
         </header>
 
         <section id="showcase">
@@ -67,7 +125,7 @@
                 <div class="box">
                     <img src="./img/logo_secratary.png">
                     <h3>Professional Gay Secratary</h3>
-                    <p>We have a Professional Gay Secretary that no one hired he came in once and said "I work here" so now he is the secratary</p>
+                    <p>We have a Professional Gay Secretary that no one hired. He came in once and said "I work here" so now he is the secratary</p>
                 </div>
             </div>
         </section>

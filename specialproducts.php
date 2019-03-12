@@ -22,6 +22,7 @@
                         <li><a href="products.html">Products</a></li>
                         <li><a href="new.html">New Stuff</a></li>
                         <li class="current"><a href="specialproducts.html">Special Products For Gay Secretary</a></li>
+                        <li><a href="steam_login.php">Login With Steam</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,10 +45,7 @@
                     <h1 class="page-title">Products</h1>
                     <ul id="specialproducts">
                         <li id="bartgay">
-                            <p id=img><img src="./img/gpu_logo.png" width="200"> + <img src="./img/cpu_logo.png" width="150"></p>
-                            <h3>Asus Nvidia GTX 1060 3GB + Free Intel Core"2 QUAD Q8300</h3>
-                            <p>In this bundle if you purchase our used Nvidia GTX 1060 3GB you get a free Intel Core"2 QUAD Q8300</p>
-                            <p id=price>Pricing: €150</p>
+
                         </li>
                     </ul>
                     </div>
